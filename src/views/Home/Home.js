@@ -151,7 +151,7 @@ const Home = () => {
     
       <Grid container spacing={3}>
       <ScrollContainer
-          className="scroll-container"
+          style={{height:"1800px"}}
           vertical={true}
           horizontal={true}
           hideScrollbars={true}
