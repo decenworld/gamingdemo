@@ -656,9 +656,8 @@ scaleY(var(--tw-scale-y))}.sm\:text-xs{font-size:.75rem;line-height:1rem}.sm\:te
 }
 
 .house {
-    position: relative;
+    position: absolute;
   top: 1400px;
   left: 1500px;
-        content: "Welcome to GeeksForGeeks";
     
 }
