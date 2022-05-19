@@ -31,7 +31,7 @@ import useTombFinance from '../../hooks/useTombFinance';
 import ScrollContainer from 'react-indiana-drag-scroll'
 
 // Import custom css
-import "./styles.css";
+import "./styless.css";
 
 
 const BackgroundImage = createGlobalStyle`
@@ -165,7 +165,7 @@ const Home = () => {
  
             <img src={PitImage} className="absolute inset-0 w-full h-full" />
             <a href='./cryptowormzhd'>
-            <span className='house'>
+            <span className='house' style={{position: "relative", top: "1400px", left: "1500px"}}>
               Crypto Wormz HD
             <img src={House} width="200" height="250" className="inset-0"  />
             </span>
