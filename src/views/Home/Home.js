@@ -22,6 +22,7 @@ import kyc from '../../assets/img/kyc.png';
 import audit from '../../assets/img/audit.jpg';
 import MetamaskFox from '../../assets/img/metamask-fox.svg';
 import PitImage from '../../assets/img/map.png';
+import House from '../../assets/img/house.png';
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
 
@@ -161,8 +162,19 @@ const Home = () => {
             className="relative h-gameboard w-gameboard"
             // TODO dynamic game board size based on tile dimensions
           >
+ 
             <img src={PitImage} className="absolute inset-0 w-full h-full" />
+            <span className='house'>
+              CryptoWormz
+            <img src={House} width="200" height="250" className="inset-0"  />
+            </span>
+
+
+
+
+
           </div>
+          
         </ScrollContainer>
       </Grid>
     </Page>
