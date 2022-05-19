@@ -164,11 +164,12 @@ const Home = () => {
           >
  
             <img src={PitImage} className="absolute inset-0 w-full h-full" />
+            <a href='./cryptowormzhd'>
             <span className='house'>
-              CryptoWormz
+              Crypto Wormz HD
             <img src={House} width="200" height="250" className="inset-0"  />
             </span>
-
+            </a>  
 
 
 
