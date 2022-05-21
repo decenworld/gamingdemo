@@ -140,7 +140,6 @@ const Providers: React.FC = ({ children }) => {
         >
           <Provider store={store}>
             <Updaters />
-            <RefreshContextProvider>
               <TombFinanceProvider>
                 <ModalsProvider>
                   <BanksProvider>
@@ -151,7 +150,6 @@ const Providers: React.FC = ({ children }) => {
                   </BanksProvider>
                 </ModalsProvider>
               </TombFinanceProvider>
-            </RefreshContextProvider>
           </Provider>
         </UseWalletProvider>
       </TP>

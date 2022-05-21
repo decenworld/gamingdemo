@@ -28,7 +28,13 @@ import ZapModal from '../Bank/components/ZapModal';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
-import ScrollContainer from 'react-indiana-drag-scroll'
+import ScrollContainer from 'react-indiana-drag-scroll';
+import Npc from '../../assets/img/npc.gif';
+import { Section, useScrollIntoView } from "../../hooks/useScrollIntoView";
+
+import mapMovement from "../../hooks/mapMovement";
+
+
 
 // Import custom css
 import "./styless.css";
@@ -66,7 +72,7 @@ const Home = () => {
   const tombFinance = useTombFinance();
   //const { balance } = useBurned2SHARES();
   const container = useRef(null);
-
+  const [scrollIntoView] = useScrollIntoView();
 
   let tomb;
   let tShare;
@@ -74,6 +80,20 @@ const Home = () => {
   tomb = tombProd;
   tShare = tShareProd;
   
+    useEffect(() => {
+    // Start with crops centered
+    // if (showGame) {
+    scrollIntoView(Section.House, "auto");
+    // }
+  }, [scrollIntoView], []);
+
+    useEffect(() => {
+    mapMovement.addListeners(container.current);
+    return () => {
+      mapMovement.removeListeners();
+    };
+  }, [container]);
+
 
   const buyTombAddress = 'https://spookyswap.finance/swap?outputCurrency=0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae'
   const buyTShareAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tShare.address;
@@ -164,12 +184,31 @@ const Home = () => {
           >
  
             <img src={PitImage} className="absolute inset-0 w-full h-full" />
-            <a href='./cryptowormzhd'>
-            <span className='house' style={{position: "relative", top: "1400px", left: "1500px"}}>
-              Crypto Wormz HD
-            <img src={House} width="200" height="250" className="inset-0"  />
+
+
+            <span className='bg-brown-200 p-1 fixed top-2 right-2 z-50 flex items-center shadow-lg cursor-pointer'
+            style={{border: "solid", borderWidth: "3px", marginRight: "10px",  
+            imageRendering: "pixelated", borderRadius: "10px"}}
+
+            >
+              100 Catcoins
             </span>
-            </a>  
+
+
+
+            <span id="house" className='house' style={{position: "absolute", top: "1400px", left: "1500px"}}>
+              Crypto Wormz HD
+            <a href='./cryptowormzhd'>
+            <img src={House} width="200" height="250" className="inset-0"  />
+            </a>
+            </span>
+
+                <span id="house" className='house' style={{position: "absolute", top: "1400px", left: "1800px"}}>
+              Crypto Wormz HD
+            <a href='./cryptowormzhd'>
+            <img src={Npc} width="100" height="150" className="inset-0"  />
+            </a>
+            </span>    
 
 
 
