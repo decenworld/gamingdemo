@@ -30,9 +30,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
 import ScrollContainer from 'react-indiana-drag-scroll';
 import Npc from '../../assets/img/npc.gif';
+import Sign from '../../assets/img/buildings/sign.png';
+
 import { Section, useScrollIntoView } from "../../hooks/useScrollIntoView";
 
 import mapMovement from "../../hooks/mapMovement";
+import AccountButton from '../../components/Nav/AccountButton';
+import AccountModal from '../../components/Nav/AccountModal';
 
 
 
@@ -188,26 +192,52 @@ const Home = () => {
 
             <span className='bg-brown-200 p-1 fixed top-2 right-2 z-50 flex items-center shadow-lg cursor-pointer'
             style={{border: "solid", borderWidth: "3px", marginRight: "10px",  
+            imageRendering: "pixelated", borderRadius: "10px", width: "140px", height: "50px"}}
+
+            >
+
+              <AccountModal></AccountModal>
+            </span>
+                        <span className='bg-brown-200 p-1 fixed top-2 right-2 z-50 flex items-center shadow-lg cursor-pointer'
+            style={{border: "solid", borderWidth: "3px", marginRight: "150px",  
             imageRendering: "pixelated", borderRadius: "10px"}}
 
             >
-              100 Catcoins
-            </span>
+                          <AccountButton text="Connect" />
+                          </span>
 
 
 
-            <span id="house" className='house' style={{position: "absolute", top: "1400px", left: "1500px"}}>
-              Crypto Wormz HD
+            <span id="house" className='house' style={{position: "absolute", top: "1450px", left: "1600px"}}>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={"https://ipfs.infura-ipfs.io/ipfs/QmUabyMYjEaYiYf32FXWiXNpQAgoRfheHZ5FzpRahV5b7k/1380.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
             <a href='./cryptowormzhd'>
-            <img src={House} width="200" height="250" className="inset-0"  />
+            <img src={House} width="134" height="165" className="inset-0"  />
             </a>
             </span>
 
-                <span id="house" className='house' style={{position: "absolute", top: "1400px", left: "1800px"}}>
-              Crypto Wormz HD
-            <a href='./cryptowormzhd'>
-            <img src={Npc} width="100" height="150" className="inset-0"  />
+                        <span id="house2" className='house2' style={{position: "absolute", top: "1150px", left: "1650px"}}>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={"https://cryptowormz.fi/config/images/worm2.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./cryptowormz'>
+            <img src={House} width="134" height="165" className="inset-0"  />
             </a>
+            </span>
+
+                <span id="house3" className='house3' style={{position: "absolute", top: "1150px", left: "1950px"}}>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={"https://ipfs.infura-ipfs.io/ipfs/QmW8xmsfRKaWeNmzqPrKEzgFGVNzN36J3SRx8SFRANAyHE/1611.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./coolpenguin'>
+            <img src={House} width="134" height="165" className="inset-0"  />
+            </a>
+            </span>
+
+                <span id="npc" className='npc' style={{position: "absolute", top: "1400px", left: "1890px"}}>
+              NPC
+            <img src={Npc} width="40" height="44" className="inset-0"  />
             </span>    
 
 
