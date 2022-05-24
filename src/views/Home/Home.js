@@ -30,7 +30,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
 import ScrollContainer from 'react-indiana-drag-scroll';
 import Npc from '../../assets/img/npc.gif';
+import Man from '../../assets/img/man.gif';
 import Sign from '../../assets/img/buildings/sign.png';
+import Smoke from '../../assets/img/buildings/smoke.gif';
+import Wallsign from '../../assets/img/wall-sign.png';
 
 import { Section, useScrollIntoView } from "../../hooks/useScrollIntoView";
 
@@ -187,7 +190,7 @@ const Home = () => {
             // TODO dynamic game board size based on tile dimensions
           >
  
-            <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/map.png" className="absolute inset-0 w-full h-full" style={{imageRendering: "pixelated"}}/>
+            <img src={PitImage} className="absolute inset-0 w-full h-full" style={{imageRendering: "pixelated"}}/>
 
 
             <span className='bg-brown-200 p-1 fixed top-2 right-2 z-50 flex items-center shadow-lg cursor-pointer'
@@ -210,38 +213,49 @@ const Home = () => {
 
             <span id="house" className='house' style={{position: "absolute", top: "1450px", left: "1600px", imageRendering: "pixelated"}}>
 
-                <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/buildings/sign.png" width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px", imageRendering: "pixelated"}} />
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px", imageRendering: "pixelated"}} />
                 <img src={"https://ipfs.infura-ipfs.io/ipfs/QmUabyMYjEaYiYf32FXWiXNpQAgoRfheHZ5FzpRahV5b7k/1380.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
             <a href='./cryptowormzhd'>
-            <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/house.png" width="134" height="165" className="inset-0"  />
+            <img src={House} width="134" height="165" className="inset-0"  />
+                <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "60px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "39px"}}>
+  <span >STAKING</span></div>
             </a>
             </span>
 
                         <span id="house2" className='house2' style={{position: "absolute", top: "1150px", left: "1650px", imageRendering: "pixelated"}}>
 
-                <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/buildings/sign.png" width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
                 <img src={"https://cryptowormz.fi/config/images/worm2.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
             <a href='./cryptowormz'>
-            <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/house.png" width="134" height="165" className="inset-0"  />
+            <img src={House} width="134" height="165" className="inset-0"  />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "60px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "39px"}}>
+  <span >STAKING</span></div>
             </a>
             </span>
 
                 <span id="house3" className='house3' style={{position: "absolute", top: "1150px", left: "1950px", imageRendering: "pixelated"}}>
 
-                <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/buildings/sign.png" width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
                 <img src={"https://ipfs.infura-ipfs.io/ipfs/QmW8xmsfRKaWeNmzqPrKEzgFGVNzN36J3SRx8SFRANAyHE/1611.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
             <a href='./coolpenguin'>
-            <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/house.png" width="134" height="165" className="inset-0"  />
+            <img src={House} width="134" height="165" className="inset-0"  />
+                            <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "60px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "39px"}}>
+  <span >STAKING</span></div>
             </a>
             </span>
 
                 <span id="npc" className='npc' style={{position: "absolute", top: "1400px", left: "1890px", imageRendering: "pixelated"}}>
               NPC
-            <img src="https://raw.githubusercontent.com/decenworld/gamingdemo/main/src/assets/img/npc.gif" width="40" height="44" className="inset-0"  />
+            <img src={Npc} width="50" height="64" className="inset-0"  />
             </span>    
 
 
-
+              <span id="man" className='man' style={{position: "absolute", top: "1500px", left: "2100px", imageRendering: "pixelated"}}>
+              
+            <img src={Man} width="40" height="44" className="inset-0"  />
+            </span> 
 
           </div>
           
